@@ -1,0 +1,113 @@
+/* Main content styles */
+.info-container_1 {
+  max-width: 906px;
+  margin: 33px 375px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-left: 520px;
+}
+
+.info-container_1 h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #131313;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+legend {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #20247b; 
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #333; /* Black */
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.meal-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.meal-details {
+  display: flex;
+  align-items: center;
+}
+
+.meal-details img {
+  max-width: 100px;
+  margin-right: 10px;
+}
+
+.details-text {
+  flex: 1;
+  margin-left: 21px;
+  color: #333; /* Black */
+}
+
+.slider-container {
+  margin-bottom: 10px;
+}
+
+.slider-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333; /* Black */
+}
+
+.quantity-slider,
+.time-slider {
+  width: 400px;
+}
+
+/* Flex container styles */
+.previous-button {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* Example margin for spacing */
+}
+
+/* Button styles */
+.button,
+.donate {
+  background-color: #333; /* Black */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.button:hover,
+.donate:hover {
+  background-color: #e89b16; /* Orange */
+}
+
+/* Adjust button widths if needed */
+#previousBtn {
+  text-align: left;
+}
+
+#donateBtn {
+  text-align: right;
+}

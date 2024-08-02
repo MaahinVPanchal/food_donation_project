@@ -1,0 +1,57 @@
+/* Reset some basic styles */
+body,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling for the header and nav */
+header {
+  background-color: #ffffff; /* White background for better contrast with black logo */
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 10px;
+}
+
+.tabs-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.tabs-container ul {
+  display: flex;
+  list-style: none;
+  justify-content: space-around;
+  width: 75%;
+}
+
+.tabs-container li {
+  margin-left: 20px;
+}
+
+.tabs-container a {
+  text-decoration: blink;
+  color: #000000; /* Black text for navigation links */
+  font-size: 17.3px;
+  font-weight: bold;
+}
+
+.tabs-container a:hover {
+  color: #1977dd; /* Blue color on hover */
+}

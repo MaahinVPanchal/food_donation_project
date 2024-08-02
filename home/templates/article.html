@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Success Stories - Food Shift</title>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/article.css' %}" />
+  </head>
+  <body>
+    {% include 'header.html' %}
+    <h1>Success Stories</h1>
+    <div class="article-content" style="display: flex">
+      <!-- Individual Success Stories -->
+      <div class="success-story">
+        <h2>
+          Ben Emmert-Aronson, Director of Operations at Open Source Wellness
+        </h2>
+        <p>
+          “Our participants are constantly asking who makes our food. Knowing
+          that the amazing food we’re eating is helping people improve their
+          lives and get back on their feet—that’s an honor!”
+        </p>
+      </div>
+
+      <div class="success-story">
+        <h2>
+          Robert Egger, Founder of DC Central Kitchen and LA Kitchen, Food
+          Security Advisor to the Mayor of Sante Fe, NM
+        </h2>
+        <p>
+          “Food Shift is at the very forefront of exploring the links between
+          food, community, economic empowerment, inclusion and health.”
+        </p>
+      </div>
+
+      <div class="success-story">
+        <h2>Abdulaziz Al-Sulaim, Food Shift Volunteer</h2>
+        <p>
+          “Thank you for all your good work! Just by working with you all I have
+          been advocating ordering less at restaurants and making sure we only
+          buy what we need at home. This is really great! We’ll do this!”
+        </p>
+      </div>
+
+      <div class="success-story">
+        <h2>Emily Rehberger</h2>
+        <p>
+          “Working at Food Shift was such a valuable experience for me in so
+          many different ways! Everything that Dana has accomplished in such a
+          short amount of time is so inspiring, and working with a small, but
+          mighty and dedicated team was incredible. Dana has a great depth of
+          knowledge about our food system, and the passion that she brings to
+          her work is unparalleled. Food Shift’s efforts to end food waste are
+          changing communities, businesses, the environment, our entire food
+          system, and of course they’ve changed my own personal behaviors as
+          well! For me, working with Food Shift has meant great conversations,
+          learning valuable office and communication skills, and new
+          friendships. I am excited to see where they go next!”
+        </p>
+      </div>
+
+      <div class="success-story">
+        <h2>Alys Spillman, Food Shift Grant Assistant</h2>
+        <p>
+          “Working with Food Shift has been an invaluable springboard to a
+          career in grant writing for nonprofits. More than any certification
+          course, this taught me the day to day requirements and processes used
+          to do grant writing from initial research to letters of thanks. The
+          experience was instrumental in securing the contract I now hold as a
+          grant writer. The team at Food Shift has managed to be present and
+          work very collaboratively with me in spite of the fact that I live on
+          the opposite coast. They are deeply passionate about the
+          interconnected issues of food waste and hunger, and I would absolutely
+          recommend volunteering with this incredible organization!”
+        </p>
+      </div>
+    </div>
+
+    {% include 'footer.html' %}
+  </body>
+</html>

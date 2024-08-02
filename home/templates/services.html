@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/services.css' %}" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    {% include 'header.html' %}
+    <section class="section services-section" id="services" style="display: flex">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="section-title">
+              <h2>Services</h2>
+              <p style="font-size:1.3em">
+                Helping the needy by redistributing surplus food from hotels
+                and restaurants.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Feature box -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fas fa-utensils"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Food Contribution</h5>
+                <p>
+                  Facilitating donations from restaurants and hotels to feed
+                  the hungry.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /Feature box -->
+          <!-- Feature box -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fas fa-hand-holding-heart"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Community Support</h5>
+                <p>
+                  Engaging the community in supporting those in need through
+                  food donations.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /Feature box -->
+          <!-- Feature box -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Volunteer Participation</h5>
+                <p>
+                  Encouraging volunteers to assist in collecting and
+                  distributing donated food.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /Feature box -->
+          <!-- Feature box -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fas fa-map-marked-alt"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Location-Based Service</h5>
+                <p>
+                  Utilizing local maps to coordinate food pickup and delivery
+                  efficiently.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /Feature box -->
+          <!-- Feature box -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fas fa-heart"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Impactful Giving</h5>
+                <p>
+                  Making a significant impact by providing meals to those
+                  facing hunger challenges. Join us in our effort.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /Feature box -->
+          <!-- Feature box -->
+          <div class="col-sm-6 col-lg-4">
+            <div class="feature-box-1">
+              <div class="icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="feature-content">
+                <h5>Timely Delivery</h5>
+                <p>
+                  Ensuring food donations reach recipients promptly to meet
+                  urgent needs.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- /Feature box -->
+        </div>
+      </div>
+    </section>
+    {% include 'footer.html' %}
+  </body>
+</html>

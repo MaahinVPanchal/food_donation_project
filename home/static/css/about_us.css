@@ -1,0 +1,46 @@
+/* about_us.css */
+
+/* About Us Section Styles */
+.info {
+  background-color: #ffffff;
+  padding: 40px 0;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.info-content {
+  flex: 1;
+}
+
+.info-content h2 {
+  color: #333;
+}
+
+.info-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.info-image {
+  display: flex;
+  justify-content: space-around; /* Adjust spacing between images */
+  align-items: center;
+  flex: 1;
+}
+
+.info-image img {
+  max-width: 45%; /* Adjust image width as needed */
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px; /* Add margin between images */
+}

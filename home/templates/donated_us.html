@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/about_us.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/donate.css' %}" />
+    <title>Food Bridge</title>
+    <style>
+      body {
+        background-image: url("https://pnghq.com/wp-content/uploads/pnghq.com-confetti-background-png-free-images-with-transparent-background-768x768.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 188vh; /* Set full viewport height */
+      }
+
+      fieldset {
+        margin-bottom: 20px;
+      }
+
+      fieldset legend {
+        font-weight: bold;
+        color: #20247b;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      input[type="text"],
+      input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 1em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"] {
+        height: 40px;
+      }
+
+      input[type="email"] {
+        height: 40px;
+      }
+
+      button {
+        padding: 10px 20px;
+        font-size: 1em;
+        background-color: #20247b;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #fc5356;
+      }
+    </style>
+  </head>
+  <body>
+    {% include 'header.html' %}
+    <section id="donate-food" class="info_1" style="max-width: 2000px">
+      <div class="info-container_1">
+        <h1>Donation Details</h1>
+        <form method="POST" action="{% url 'donated_us' %}">
+          <fieldset>
+            <legend>Meal Type</legend>
+            <p>
+              <input
+                type="text"
+                name="meal_type"
+                value="{{ donation.meal_type }}"
+                readonly
+              />
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Meal Options</legend>
+            <p>
+              Breakfast:
+              <input
+                type="checkbox"
+                name="breakfast"
+                {%
+                if
+                donation.breakfast
+                %}checked{%
+                endif
+                %}
+                readonly
+              />
+            </p>
+            {% if donation.breakfast %}
+            <p>
+              Breakfast Quantity:
+              <input
+                type="text"
+                name="breakfast_quantity"
+                value="{{ donation.breakfast_quantity }}"
+                readonly
+              />
+            </p>
+            <p>
+              Breakfast Time:
+              <input
+                type="text"
+                name="breakfast_time"
+                value="{{ donation.breakfast_time }}"
+                readonly
+              />
+            </p>
+            {% endif %}
+            <p>
+              Lunch:
+              <input
+                type="checkbox"
+                name="lunch"
+                {%
+                if
+                donation.lunch
+                %}checked{%
+                endif
+                %}
+                readonly
+              />
+            </p>
+            {% if donation.lunch %}
+            <p>
+              Lunch Quantity:
+              <input
+                type="text"
+                name="lunch_quantity"
+                value="{{ donation.lunch_quantity }}"
+                readonly
+              />
+            </p>
+            <p>
+              Lunch Time:
+              <input
+                type="text"
+                name="lunch_time"
+                value="{{ donation.lunch_time }}"
+                readonly
+              />
+            </p>
+            {% endif %}
+            <p>
+              Dinner:
+              <input
+                type="checkbox"
+                name="dinner"
+                {%
+                if
+                donation.dinner
+                %}checked{%
+                endif
+                %}
+                readonly
+              />
+            </p>
+            {% if donation.dinner %}
+            <p>
+              Dinner Quantity:
+              <input
+                type="text"
+                name="dinner_quantity"
+                value="{{ donation.dinner_quantity }}"
+                readonly
+              />
+            </p>
+            <p>
+              Dinner Time:
+              <input
+                type="text"
+                name="dinner_time"
+                value="{{ donation.dinner_time }}"
+                readonly
+              />
+            </p>
+            {% endif %}
+          </fieldset>
+
+          <fieldset>
+            <legend>Meal Packed</legend>
+            <p>
+              <input
+                type="text"
+                name="meal_prepared"
+                value="{{ donation.meal_prepared }}"
+                readonly
+              />
+            </p>
+          </fieldset>
+
+          <fieldset>
+            <legend>Restaurant Details</legend>
+            <label for="restaurant_name">Restuarant Name:</label>
+            <input
+              type="text"
+              id="restaurant_name"
+              name="restaurant_name"
+              required
+            />
+            <label for="restaurant_address">Restaurant Address:</label>
+            <input
+              type="text"
+              id="restaurant_address"
+              name="restaurant_address"
+              required
+            />
+
+            <label for="phone_number">Phone Number:</label>
+            <input type="text" id="phone_number" name="phone_number" required />
+
+            <label for="res_email">Email or person who is placing order:</label>
+            <input type="email" id="res_email" name="res_email" required />
+          </fieldset>
+          {% csrf_token %}
+          <button
+            type="button"
+            class="donate"
+            id="prevBtn"
+            onclick="window.location.href='{% url 'donate_food' %}'"
+          >
+            Previous
+          </button>
+          <button type="submit" class="donate" id="submitBtn">Submit</button>
+        </form>
+      </div>
+    </section>
+    {% include 'footer.html' %}
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/about_us.css' %}" />
+  </head>
+  <body>
+    {% include 'header.html' %}
+    <section id="about-us" class="info">
+      <div class="info-container">
+        <div class="info-content">
+          <h2
+            style="
+              margin-left: 145px;
+              font-weight: 700;
+              color: #20247b;
+              font-size: 2.0em;
+              margin: 0 0 15px;
+              border-left: 5px solid #fc5356;
+              padding-left: 15px;
+            "
+          >
+            About Us: FoodBridge
+          </h2>
+
+          <h2 style="font-size: 1.7em"><strong>Our Mission</strong></h2>
+          <p>
+            At FoodBridge, our mission is to ensure that surplus food from
+            hotels and restaurants reaches those who need it most. We strive to
+            reduce food wastage and alleviate hunger in India by partnering with
+            hospitality establishments across the country.
+          </p>
+          <p>
+            Each day, numerous hotels and restaurants prepare more food than is
+            consumed. This surplus, which would otherwise go to waste, holds the
+            potential to feed individuals and families facing food insecurity.
+            By collaborating with our generous partners, we collect this excess
+            food and distribute it to various communities in need.
+          </p>
+          <p>
+            India, despite being a top food producer, faces significant
+            challenges related to food wastage and hunger. Millions of Indians
+            suffer from malnutrition and food insecurity, especially in rural
+            areas and urban slums. By redirecting surplus food from our
+            partners, we aim to make a direct impact on reducing hunger and
+            promoting food security.
+          </p>
+          <p>
+            Join us in our commitment to ensuring that no one in India goes to
+            bed hungry. Together, we can make a meaningful difference in the
+            lives of those who need it most.
+          </p>
+        </div>
+
+        <div class="info-image">
+          <img
+            id="info-image"
+            src="{% static 'images/aboutus1.jpg' %}"
+            alt="Image Description"
+          />
+          <img
+            id="info-image"
+            src="{% static 'images/aboutus2.jpg' %}"
+            alt="Image Description"
+          />
+        </div>
+      </div>
+    </section>
+    {% include 'footer.html' %}
+  </body>
+</html>

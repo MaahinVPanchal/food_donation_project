@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FoodBridge</title>
+    <link rel="stylesheet" href="{% static 'css/style_1.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-TXHxYng/O17JJHv1AJSB7q27yRJN+7e1kw9QYRY9gjAbDcN+14FE7BvC8fC7PLtxg3I2YenEx+m6k8JF2STzKQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Add the slick-carousel CSS files -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      {% include 'header.html' %}
+
+      <section class="carousel">
+        <div class="carousel-container">
+          <div class="slide">
+            <img
+              src="{% static 'images/8.jpg' %}"
+              alt="Food Donation Motivation"
+            />
+            <div class="carousel-caption">
+              <h2>Help Reduce Food Wastage in India</h2>
+              <p>
+                India wastes a significant amount of food every year. Your
+                contribution can make a difference!
+              </p>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="https://repository-images.githubusercontent.com/629572204/ea7a6eb4-98a9-4a29-a81c-b8ab3b171a01"
+              alt="Food Donation Motivation"
+            />
+            <div class="carousel-caption">
+              <h2>Join Us in the Fight Against Hunger</h2>
+              <p>Together, we can ensure no one goes to bed hungry.</p>
+            </div>
+          </div>
+          <div class="slide">
+            <img
+              src="{% static 'images/image4.png' %}"
+              alt="Food Donation Motivation"
+            />
+            <div class="carousel-caption">
+              <h2>Make a Lasting Impact</h2>
+              <p>
+                Your support provides hope and nourishment to those in need.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="activities" class="info">
+        <div class="info-container">
+          <div class="info-content">
+            <h2 style="font-size: 2.0em">Our Activities</h2>
+            <p>
+              At FoodBridge, we are committed to several activities aimed at
+              reducing food wastage and alleviating hunger in India:
+            </p>
+            <ul>
+              <li>
+                <i class="fas fa-box-open"></i>
+                <strong>Food Collection:</strong> Partnering with hotels and
+                restaurants to collect surplus food daily.
+              </li>
+              <li>
+                <i class="fas fa-gift"></i>
+                <strong>Food Distribution:</strong> Distributing collected food
+                to various communities in need.
+              </li>
+              <li>
+                <i class="fas fa-users"></i>
+                <strong>Community Outreach:</strong> Conducting awareness
+                campaigns and engaging with local communities.
+              </li>
+              <li>
+                <i class="fas fa-hands-helping"></i>
+                <strong>Volunteer Programs:</strong> Organizing volunteer
+                activities to support our mission.
+              </li>
+              <li>
+                <i class="fas fa-chalkboard-teacher"></i>
+                <strong>Educational Workshops:</strong> Hosting workshops on
+                food wastage and sustainable practices.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery">
+        <h2
+          style="
+            font-weight: 700;
+            color: #20247b;
+            font-size: 2.0em;
+            margin: 0 148px 25px;
+            border-left: 5px solid #fc5356;
+            padding-left: 15px;
+          "
+        >
+          Gallery
+        </h2>
+
+        <div class="gallery-container">
+          <div class="gallery-row">
+            <div class="gallery-item">
+              <img src="{% static 'images/gallery1.jpg' %}" alt="Image 1" />
+            </div>
+            <div class="gallery-item">
+              <img src="{% static 'images/gallery2.jpg' %}" alt="Image 2" />
+            </div>
+            <div class="gallery-item">
+              <img src="{% static 'images/gallery4.jpg' %}" alt="Image 4" />
+            </div>
+            <div class="gallery-item">
+              <img src="{% static 'images/gallery5.jpg' %}" alt="Image 5" />
+            </div>
+          </div>
+          <div class="gallery-row hidden">
+            <div class="gallery-item">
+              <img src="{% static 'images/gallery6.jpg' %}" alt="Image 6" />
+            </div>
+            <div class="gallery-item">
+              <img src="{% static 'images/image1.jpg' %}" alt="Image 7" />
+            </div>
+            <div class="gallery-item">
+              <img src="{% static 'images/image2.jpg' %}" alt="Image 8" />
+            </div>
+            <div class="gallery-item">
+              <img src="{% static 'images/image3.jpg' %}" alt="Image 9" />
+            </div>
+          </div>
+          <div class="show-more-button">
+            <button id="show-more-btn">Show More</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="review">
+        <h1>Customer Reviews</h1>
+        <div id="review-carousel" class="review-carousel">
+          {% for review in reviews %}
+          <div class="review-item">
+            <p>{{ review.text }}</p>
+            <p class="author">- {{ review.author }}</p>
+          </div>
+          {% endfor %}
+        </div>
+      </section>
+    </div>
+    {% include 'footer.html' %}
+    <script src="{% static 'js/carousel.js'%}"></script>
+    <!-- Include jQuery before the Slick Carousel script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Add the Slick Carousel script -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+      // Initialize Slick Carousel for reviews
+      $(document).ready(function () {
+        $(".review-carousel").slick({
+          dots: true,
+          infinite: true,
+          speed: 500,
+          slidesToShow: 1,
+          adaptiveHeight: true,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          prevArrow:
+            '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+          nextArrow:
+            '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+          responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        });
+      });
+    </script>
+    <script>
+      document
+        .getElementById("show-more-btn")
+        .addEventListener("click", function () {
+          const hiddenGallery = document.querySelector(".gallery-row.hidden");
+
+          if (hiddenGallery) {
+            // Toggle the visibility of the hidden gallery row
+            hiddenGallery.classList.toggle("hidden");
+
+            // Update button text based on visibility state
+            if (hiddenGallery.classList.contains("hidden")) {
+              this.textContent = "Show More"; // Change button text to "Show More" if hidden
+            } else {
+              this.textContent = "Show Less"; // Change button text to "Show Less" if shown
+            }
+          } else {
+            // If no gallery rows are hidden, hide additional images
+            const galleryRows = document.querySelectorAll(".gallery-row");
+
+            // Hide all but the first row
+            galleryRows.forEach((row, index) => {
+              if (index > 0) {
+                row.classList.add("hidden");
+              }
+            });
+
+            this.textContent = "Show More"; // Change button text to "Show Less"
+          }
+        });
+    </script>
+  </body>
+</html>

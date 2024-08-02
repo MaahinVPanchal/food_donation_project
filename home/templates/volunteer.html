@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="{% static 'css/header.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/about_us.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/volunteer.css' %}" />
+  </head>
+  <body>
+    {% include 'header.html' %}
+
+    <!-- Volunteer Form Section -->
+    <div class="volunteer-form-container">
+      <h2>Volunteer Registration Form</h2>
+      <form method="post" action="/volunteer/">
+        <!-- Personal Information -->
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required />
+
+        <!-- Address -->
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+
+        <!-- Skills and Preferences -->
+        <label for="skills">Skills and Preferences:</label>
+        <textarea id="skills" name="skills" rows="4"></textarea>
+
+        <!-- Additional Information -->
+        <label for="additional_info">Additional Information:</label>
+        <textarea
+          id="additional_info"
+          name="additional_info"
+          rows="4"
+        ></textarea>
+
+        <!-- CSRF Token -->
+        {% csrf_token %}
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+
+    {% include 'footer.html' %}
+  </body>
+</html>
